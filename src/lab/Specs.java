@@ -9,10 +9,9 @@ package lab;
  *
  *  ต้องมีอย่างน้อย:
  *    - บรรทัดสรุปว่าเมธอด "ทำอะไร" (what, ไม่ใช่ how)
- *    - @param  arr
- *    - @param  key
- *    - @return  
- *    - @throws  IllegalArgumentException
+ *    - @param   ของทุกพารามิเตอร์ พร้อมข้อจำกัด (pre-condition)
+ *    - @return  อธิบายค่าที่คืน (post-condition)
+ *    - @throws  ทุก exception ที่โยน พร้อมเงื่อนไข
  * ==========================================================================
  */
 public class Specs {
@@ -27,7 +26,7 @@ public class Specs {
 
     // TODO ข้อ 5: เขียน JavaDoc ให้เมธอดนี้
     /**
-     * @throws IllegalArgumentException
+     * 
      * @param radius
      * @return
      */
@@ -36,7 +35,9 @@ public class Specs {
         return Math.PI * radius * radius;
     }
 
-    
+    // TODO ข้อ 6: เขียน JavaDoc ให้เมธอดนี้
+    //   (เมธอดนี้ตัดช่องว่างหน้า-หลัง แล้วแปลงเป็นตัวพิมพ์เล็ก;
+    //    input null ให้คืน string ว่าง)
     public static String normalize(String s) {
         if (s == null) return "";
         return s.trim().toLowerCase();
